@@ -1,12 +1,18 @@
+
 {
-  "name": "smart-ration-shop",
+  "name": "makkalhub",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "MakkalHub - Public Information and SMS Notification Management System",
+  "main": "backend/server.js",
   "scripts": {
+    "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "makkalhub",
+    "public-information",
+    "sms-notifications"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
