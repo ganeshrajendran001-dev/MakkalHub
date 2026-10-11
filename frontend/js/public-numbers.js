@@ -317,7 +317,7 @@ async function displayMembers() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/public-numbers?area=" +
+                "http://https://makkalhub-backend.onrender.com/api/public-numbers?area=" +
                 encodeURIComponent(selectedArea)
             );
 
@@ -502,7 +502,7 @@ memberForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/public-numbers",
+                    "http://https://makkalhub-backend.onrender.com/api/public-numbers",
                     {
                         method: "POST",
 
@@ -610,7 +610,7 @@ async function deleteMember(id) {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/public-numbers/" +
+                "http://https://makkalhub-backend.onrender.com/api/public-numbers/" +
                 id,
                 {
                     method: "DELETE"

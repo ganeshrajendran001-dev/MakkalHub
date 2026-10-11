@@ -79,7 +79,7 @@ async function loadSpecialIssues() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/special-issue"
+                "http://https://makkalhub-backend.onrender.com/api/special-issue"
             );
 
 
@@ -264,7 +264,7 @@ async function deleteSpecialIssue(issueId) {
 
         const response =
             await fetch(
-                `http://localhost:5000/api/special-issue/${issueId}`,
+                `http://https://makkalhub-backend.onrender.com/api/special-issue/${issueId}`,
                 {
                     method: "DELETE"
                 }
@@ -364,7 +364,7 @@ specialIssueForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/special-issue",
+                    "http://https://makkalhub-backend.onrender.com/api/special-issue",
                     {
                         method: "POST",
 

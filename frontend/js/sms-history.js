@@ -178,7 +178,7 @@ async function loadSmsHistory() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/sms/history"
+            "http://https://makkalhub-backend.onrender.com/api/sms/history"
         );
 
 
@@ -405,7 +405,7 @@ async function deleteSingleHistory(smsId) {
 
         const response =
             await fetch(
-                `http://localhost:5000/api/sms/history/${smsId}`,
+                `http://https://makkalhub-backend.onrender.com/api/sms/history/${smsId}`,
                 {
                     method: "DELETE"
                 }
@@ -504,7 +504,7 @@ deleteSelectedBtn.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/sms/history",
+                    "http://https://makkalhub-backend.onrender.com/api/sms/history",
                     {
                         method: "DELETE",
 
