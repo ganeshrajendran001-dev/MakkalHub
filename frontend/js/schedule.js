@@ -170,7 +170,7 @@ async function loadSchedules() {
     try {
 
         const response = await fetch(
-            "http://https://makkalhub-backend.onrender.com/api/schedule"
+            "https://makkalhub-backend.onrender.com/api/schedule"
         );
 
         const data = await response.json();
@@ -652,7 +652,7 @@ scheduleForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://https://makkalhub-backend.onrender.com/api/schedule",
+                    "https://makkalhub-backend.onrender.com/api/schedule",
                     {
 
                         method: "POST",
@@ -753,7 +753,7 @@ async function deleteSchedule(id) {
 
         const response =
             await fetch(
-                `http://https://makkalhub-backend.onrender.com/api/schedule/${id}`,
+                `https://makkalhub-backend.onrender.com/api/schedule/${id}`,
                 {
                     method: "DELETE"
                 }

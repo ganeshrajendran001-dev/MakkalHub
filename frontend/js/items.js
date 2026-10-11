@@ -448,7 +448,7 @@ async function loadSavedItems() {
 
         const response =
             await fetch(
-                "http://https://makkalhub-backend.onrender.com/api/items"
+                "https://makkalhub-backend.onrender.com/api/items"
             );
 
 
@@ -913,7 +913,7 @@ async function deleteSavedItem(
 
         const response =
             await fetch(
-                `http://https://makkalhub-backend.onrender.com/api/items/${dailyItemId}`,
+                `https://makkalhub-backend.onrender.com/api/items/${dailyItemId}`,
                 {
                     method: "DELETE"
                 }
@@ -1039,7 +1039,7 @@ async function saveAllItems() {
 
             const response =
                 await fetch(
-                    "http://https://makkalhub-backend.onrender.com/api/items",
+                    "https://makkalhub-backend.onrender.com/api/items",
                     {
                         method: "POST",
 

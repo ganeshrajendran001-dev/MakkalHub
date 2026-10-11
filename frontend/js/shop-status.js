@@ -1,5 +1,5 @@
 
-const API_URL = "http://https://makkalhub-backend.onrender.com/api/shop";
+const API_URL = "https://makkalhub-backend.onrender.com/api/shop";
 
 const form = document.getElementById("shopStatusForm");
 const statusMessage = document.getElementById("statusMessage");

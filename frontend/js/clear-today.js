@@ -39,7 +39,7 @@ if (clearTodayBtn) {
 
                 const response =
                     await fetch(
-                        "http://https://makkalhub-backend.onrender.com/api/clear-today",
+                        "https://makkalhub-backend.onrender.com/api/clear-today",
                         {
                             method: "DELETE"
                         }

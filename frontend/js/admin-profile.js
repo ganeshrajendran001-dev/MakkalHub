@@ -230,7 +230,7 @@ changePasswordForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://https://makkalhub-backend.onrender.com/api/auth/change-password",
+                    "https://makkalhub-backend.onrender.com/api/auth/change-password",
                     {
                         method: "POST",
 

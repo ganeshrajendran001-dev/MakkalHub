@@ -28,7 +28,7 @@ async function displaySmsMembers() {
     try {
 
         const response = await fetch(
-            "http://https://makkalhub-backend.onrender.com/api/public-numbers?area=" +
+            "https://makkalhub-backend.onrender.com/api/public-numbers?area=" +
             encodeURIComponent(selectedArea)
         );
 
@@ -232,7 +232,7 @@ sendSmsBtn.addEventListener("click", async function() {
     try {
 
         const response = await fetch(
-            "http://https://makkalhub-backend.onrender.com/api/sms",
+            "https://makkalhub-backend.onrender.com/api/sms",
             {
                 method: "POST",
 

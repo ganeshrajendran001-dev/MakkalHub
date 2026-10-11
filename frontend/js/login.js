@@ -194,7 +194,7 @@ loginForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://https://makkalhub-backend.onrender.com/api/auth/login",
+                    "https://makkalhub-backend.onrender.com/api/auth/login",
                     {
                         method: "POST",
 
