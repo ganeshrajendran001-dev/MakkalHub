@@ -497,7 +497,7 @@ async function loadPublicInformation() {
     try {
 
         const response = await fetch(
-            "http://https://makkalhub-backend.onrender.com/api/public"
+           https://makkalhub-backend.onrender.com/api/public
         );
 
         const data = await response.json();
