@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="MakkalHub - Digital Public Information & Notification Portal">
+
+    <title>MakkalHub | Public Information Portal</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+<!-- MakkalHub Loading Screen -->
+
+<!-- MakkalHub Loading Screen -->
+<div id="makkalhub-loader">
+    <div class="loader-content">
+
+        <img
+            src="images/Golden-Hour MakkalHub Ration Shop Banner.png"
+            alt="MakkalHub"
+            class="loader-image"
+        >
+
+        <div class="loader-overlay">
+            <p class="loader-text">Loading...</p>
+
+            <div class="loader-progress">
+                <div id="loader-progress-bar"></div>
+            </div>
+
+            <p class="loader-percentage">
+                <span id="loader-percentage">0</span>%
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="logo">
+            <img src="images/logo.png" alt="MakkalHub Logo">
+            <span data-i18n="brandName">MakkalHub</span>
+        </div>
+
+
+        <nav aria-label="Main Navigation">
+
+            <a href="#home"
+               data-i18n="navHome">
+                Home
+            </a>
+
+            <a href="#today"
+               data-i18n="navToday">
+                Today's Information
+            </a>
+
+            <a href="#items"
+               data-i18n="navItems">
+                Today's Items
+            </a>
+
+            <a href="#schedule"
+               data-i18n="navSchedule">
+                Schedule
+            </a>
+
+            <a href="#special"
+               data-i18n="navSpecial">
+                Special Issue
+            </a>
+
+            <a href="login.html"
+               class="admin-btn"
+               data-i18n="navAdmin">
+                Admin Login
+            </a>
+
+            <!-- LANGUAGE TOGGLE -->
+
+            <button type="button"
+                    id="languageToggle"
+                    class="language-toggle"
+                    aria-label="Change language">
+
+                <span id="languageToggleText">
+                    தமிழ்
+                </span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="home">
+
+        <img
+            src="images/hero.png"
+            alt="Public distribution shop"
+            class="hero-image"
+        >
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="eyebrow"
+                  data-i18n="heroEyebrow">
+                DIGITAL PUBLIC INFORMATION PORTAL
+            </span>
+
+            <h1>
+                MakkalHub
+            </h1>
+
+            <p data-i18n="heroDescription">
+                Access the latest shop information,
+                daily item prices, area-wise distribution
+                schedules and special government issue
+                updates in one place.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#today"
+                   class="main-btn"
+                   data-i18n="heroTodayButton">
+                    View Today's Information
+                </a>
+
+                <a href="#schedule"
+                   class="secondary-btn"
+                   data-i18n="heroScheduleButton">
+                    View Schedule
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TODAY'S INFORMATION
+    ====================================================== -->
+
+    <section class="container"
+             id="today">
+
+        <div class="section-heading">
+
+            <span class="section-label"
+                  data-i18n="todayLabel">
+                TODAY
+            </span>
+
+            <h2 data-i18n="todayTitle">
+                Today's Information
+            </h2>
+
+            <p class="section-description"
+               data-i18n="todayDescription">
+                Quickly check today's shop status,
+                distribution area and upcoming information.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- SHOP STATUS -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🏪
+                </div>
+
+
+                <div class="card-content">
+
+                    <span class="info-label"
+                          data-i18n="shopStatusLabel">
+                        SHOP STATUS
+                    </span>
+
+
+                    <h3 data-i18n="shopStatusTitle">
+                        Shop Status
+                    </h3>
+
+
+                    <p id="publicShopStatus"
+                       class="status-open">
+
+                        Loading...
+
+                    </p>
+
+
+                    <div class="info-row">
+
+                        <span data-i18n="inTime">
+                            In Time
+                        </span>
+
+                        <strong id="publicInTime">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span data-i18n="outTime">
+                            Out Time
+                        </span>
+
+                        <strong id="publicOutTime">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span data-i18n="availability">
+                            Availability
+                        </span>
+
+                        <strong id="publicAdminStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span data-i18n="leaveDate">
+                            Leave Date
+                        </span>
+
+                        <strong id="publicLeaveDate">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span data-i18n="leaveReason">
+                            Leave Reason
+                        </span>
+
+                        <strong id="publicLeaveReason">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span data-i18n="nextAvailable">
+                            Next Available
+                        </span>
+
+                        <strong id="publicNextAvailableDate">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TODAY DISTRIBUTION -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+
+                <div class="card-content">
+
+                    <span class="info-label"
+                          data-i18n="distributionLabel">
+                        DISTRIBUTION
+                    </span>
+
+
+                    <h3 data-i18n="todayDistributionTitle">
+                        Today's Distribution
+                    </h3>
+
+
+                    <p id="todayArea"
+                       class="area">
+
+                        Loading...
+
+                    </p>
+
+
+                    <div class="info-row">
+
+                        <span data-i18n="distributionTime">
+                            Distribution Time
+                        </span>
+
+                        <strong id="todayDistributionTime">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOMORROW -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📅
+                </div>
+
+
+                <div class="card-content">
+
+                    <span class="info-label"
+                          data-i18n="upcomingLabel">
+                        UPCOMING
+                    </span>
+
+
+                    <h3 data-i18n="tomorrowTitle">
+                        Tomorrow
+                    </h3>
+
+
+                    <p id="tomorrowArea"
+                       class="area">
+
+                        Loading...
+
+                    </p>
+
+
+                    <p id="tomorrowMessage"
+                       class="card-description"
+                       data-i18n="tomorrowMessage">
+                        Distribution information
+                        will be displayed here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TODAY'S ITEMS
+    ====================================================== -->
+
+    <section class="container"
+             id="items">
+
+        <div class="section-heading">
+
+            <span class="section-label"
+                  data-i18n="dailyItemsLabel">
+                DAILY ITEMS
+            </span>
+
+            <h2 data-i18n="todayItemsTitle">
+                Today's Items
+            </h2>
+
+            <p class="section-description"
+               data-i18n="todayItemsDescription">
+                Check the items, prices, quantity and
+                availability updated for today.
+            </p>
+
+        </div>
+
+
+        <div class="items-grid"
+             id="publicItemsGrid">
+
+            <div class="item-card">
+
+                <div class="item-visual">
+                    📦
+                </div>
+
+
+                <div class="item-content">
+
+                    <span class="info-label"
+                          data-i18n="itemLabel">
+                        ITEM
+                    </span>
+
+
+                    <h3 data-i18n="loading">
+                        Loading...
+                    </h3>
+
+
+                    <p data-i18n="itemLoadingMessage">
+                        Please wait while today's
+                        item information is loaded.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AREA-WISE DISTRIBUTION SCHEDULE
+    ====================================================== -->
+
+    <section class="container"
+             id="schedule">
+
+        <div class="section-heading">
+
+            <span class="section-label"
+                  data-i18n="areaInformationLabel">
+                AREA-WISE INFORMATION
+            </span>
+
+            <h2 data-i18n="distributionScheduleTitle">
+                Distribution Schedule
+            </h2>
+
+            <p class="section-description"
+               data-i18n="distributionScheduleDescription">
+                View distribution information for
+                each service area.
+            </p>
+
+        </div>
+
+
+        <div class="schedule-table"
+             id="publicScheduleTable">
+
+            <div class="schedule-row">
+
+                <div data-i18n="loadingSchedule">
+                    Loading schedule...
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPECIAL GOVERNMENT ISSUE
+    ====================================================== -->
+
+    <section class="container"
+             id="special">
+
+        <div class="special-box">
+
+            <div class="special-content">
+
+                <span class="special-icon">
+                    🎁
+                </span>
+
+
+                <div>
+
+                    <span class="section-label"
+                          data-i18n="governmentUpdateLabel">
+                        GOVERNMENT UPDATE
+                    </span>
+
+
+                    <h2 data-i18n="specialIssueTitle">
+                        Special Government Issue
+                    </h2>
+
+
+                    <p class="section-description"
+                       data-i18n="specialIssueDescription">
+                        Information about upcoming special
+                        government-issued items and benefits.
+                    </p>
+
+
+                    <div id="publicSpecialIssue">
+
+                        <p data-i18n="specialIssueLoading">
+                            Loading special issue
+                            information...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    🌐 <span data-i18n="brandName">MakkalHub</span>
+                </h3>
+
+                <p data-i18n="footerDescription">
+                    Digital Public Information &
+                    Notification Portal
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home"
+                   data-i18n="navHome">
+                    Home
+                </a>
+
+                <a href="#items"
+                   data-i18n="navItems">
+                    Today's Items
+                </a>
+
+                <a href="#schedule"
+                   data-i18n="navSchedule">
+                    Schedule
+                </a>
+
+                <a href="#special"
+                   data-i18n="navSpecial">
+                    Special Issue
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p data-i18n="footerCopyright">
+                © 2026 MakkalHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+   
+<!-- PUBLIC JAVASCRIPT -->
+<script src="js/public.js"></script>
+
+<!-- LANGUAGE JAVASCRIPT -->
+<script src="js/language.js"></script>
+
+<!-- LOADING SCREEN JAVASCRIPT -->
+<script src="js/loader.js"></script>
+
+</body>
+</html>

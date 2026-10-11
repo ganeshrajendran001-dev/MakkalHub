@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Public Numbers - MakkalHub Admin</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="logo">
+            🌐 MakkalHub
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                View Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PUBLIC NUMBERS
+    ====================================================== -->
+
+    <section class="admin-form-container">
+
+
+        <!-- Back Button -->
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="history.back()"
+        >
+
+            <span>←</span>
+
+            Back
+
+        </button>
+
+
+
+        <!-- Page Heading -->
+
+        <div class="form-heading">
+
+            <h1>📱 Public Numbers</h1>
+
+            <p>
+                Add and manage public members
+                area-wise
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SELECT AREA
+        ================================================== -->
+
+        <div class="form-group">
+
+            <label for="areaSelect">
+                Select Area
+            </label>
+
+
+            <select id="areaSelect">
+
+                <option value="">
+                    Select Area
+                </option>
+
+
+                <option value="Killinjikuppam">
+                    Killinjikuppam
+                </option>
+
+
+                <option value="Killinjikuppam PT">
+                    Killinjikuppam PT
+                </option>
+
+
+                <option value="Puthu Poonjolaikuppam">
+                    Puthu Poonjolaikuppam
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ADD MEMBER BOX
+        ================================================== -->
+
+        <div class="public-number-add-box">
+
+
+            <div class="public-number-box-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        NEW MEMBER
+                    </span>
+
+                    <h2>
+                        Add Public Member
+                    </h2>
+
+                    <p>
+                        Save a member name and mobile
+                        number under the selected area.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <form id="memberForm">
+
+
+                <!-- Member Name -->
+
+                <div class="form-group">
+
+                    <label for="memberName">
+                        Member Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="memberName"
+                        placeholder="Enter member name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Mobile Number -->
+
+                <div class="form-group">
+
+                    <label for="memberMobile">
+                        Mobile Number
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="memberMobile"
+                        placeholder="Enter 10 digit mobile number"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="save-button"
+                >
+
+                    ➕ Add Member
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+
+        <!-- Success / Error Message -->
+
+        <p id="memberMessage"></p>
+
+
+
+        <!-- =================================================
+             SAVED MEMBERS BOX
+        ================================================== -->
+
+        <div class="saved-members-container">
+
+
+            <!-- Saved Members Header -->
+
+            <div class="saved-members-header">
+
+                <div>
+
+                    <span class="section-label">
+                        SAVED MEMBERS
+                    </span>
+
+
+                    <h2 id="memberListTitle">
+                        Members
+                    </h2>
+
+
+                    <p>
+                        Search and manage saved public
+                        members for the selected area.
+                    </p>
+
+                </div>
+
+
+                <div class="member-count-badge"
+                     id="memberCountBadge">
+
+                    0 Members
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SEARCH BOX
+            ================================================== -->
+
+            <div class="member-search-box">
+
+
+                <label for="memberSearch">
+                    🔎 Search Members
+                </label>
+
+
+                <input
+                    type="search"
+                    id="memberSearch"
+                    placeholder="Search by name or mobile number..."
+                    autocomplete="off"
+                >
+
+
+                <p class="search-hint">
+                    Type a name or mobile number to
+                    quickly find a member.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MEMBER LIST
+            ================================================== -->
+
+            <div
+                id="memberList"
+                class="saved-member-list"
+            >
+
+                <div class="member-empty-state">
+
+                    <div class="empty-icon">
+                        👥
+                    </div>
+
+                    <h3>
+                        No Area Selected
+                    </h3>
+
+                    <p>
+                        Select an area above to view
+                        saved members.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <script src="js/public-numbers.js"></script>
+
+
+</body>
+
+</html>

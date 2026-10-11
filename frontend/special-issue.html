@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Special Government Issue - MakkalHub Admin</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            🌐 MakkalHub
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                View Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Special Government Issue -->
+
+    <section class="admin-form-container">
+
+
+        <!-- Back Button -->
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="history.back()"
+        >
+
+            <span>←</span>
+
+            Back
+
+        </button>
+
+
+
+        <div class="form-heading">
+
+            <h1>
+                Special Government Issue
+            </h1>
+
+
+            <p>
+                Add special government issue
+                information and updates
+            </p>
+
+        </div>
+
+
+
+        <!-- Add Special Issue Form -->
+
+        <form id="specialIssueForm">
+
+
+            <!-- Month -->
+
+            <div class="form-group">
+
+                <label for="issueMonth">
+                    Month
+                </label>
+
+
+                <input
+                    type="month"
+                    id="issueMonth"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Item -->
+
+            <div class="form-group">
+
+                <label for="issueItem">
+                    Item Name
+                </label>
+
+
+                <input
+                    type="text"
+                    id="issueItem"
+                    placeholder="Example: Special Rice"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Quantity -->
+
+            <div class="form-group">
+
+                <label for="issueQuantity">
+                    Quantity
+                </label>
+
+
+                <input
+                    type="number"
+                    id="issueQuantity"
+                    placeholder="Enter quantity"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Unit -->
+
+            <div class="form-group">
+
+                <label for="issueUnit">
+                    Unit
+                </label>
+
+
+                <select id="issueUnit">
+
+                    <option value="Kg">
+                        Kg
+                    </option>
+
+                    <option value="Packet">
+                        Packet
+                    </option>
+
+                    <option value="Litre">
+                        Litre
+                    </option>
+
+                    <option value="Piece">
+                        Piece
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Issue Date -->
+
+            <div class="form-group">
+
+                <label for="issueDate">
+                    Issue Date
+                </label>
+
+
+                <input
+                    type="date"
+                    id="issueDate"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Area -->
+
+            <div class="form-group">
+
+                <label for="eligibleArea">
+                    Eligible Area
+                </label>
+
+
+                <select
+                    id="eligibleArea"
+                    required
+                >
+
+                    <option value="">
+                        Select Area
+                    </option>
+
+
+                    <option value="All Areas">
+                        All Areas
+                    </option>
+
+
+                    <option value="Killinjikuppam">
+                        Killinjikuppam
+                    </option>
+
+
+                    <option value="Killinjikuppam PT">
+                        Killinjikuppam PT
+                    </option>
+
+
+                    <option value="Puthu Poonjolaikuppam">
+                        Puthu Poonjolaikuppam
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Description -->
+
+            <div class="form-group">
+
+                <label for="issueDescription">
+                    Government Issue Information
+                </label>
+
+
+                <textarea
+                    id="issueDescription"
+                    rows="5"
+                    placeholder="Enter government issue details..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- Save -->
+
+            <button
+                type="submit"
+                class="save-button"
+            >
+
+                💾 Save Special Issue
+
+            </button>
+
+
+            <p id="issueMessage"></p>
+
+
+        </form>
+
+
+
+        <!-- Saved Special Government Issues -->
+
+        <div class="saved-special-issues">
+
+
+            <div class="form-heading">
+
+                <h2>
+                    Saved Special Government Issues
+                </h2>
+
+                <p>
+                    Manage previously saved government issue information
+                </p>
+
+            </div>
+
+
+            <div id="specialIssueList">
+
+                <div class="schedule-empty">
+
+                    <p>
+                        Loading special government issues...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <script src="js/special-issue.js"></script>
+
+
+</body>
+
+</html>

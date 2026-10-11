@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Send SMS - MakkalHub Admin</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            🌐 MakkalHub
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                View Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Send SMS -->
+
+    <section class="admin-form-container">
+
+
+        <!-- Back Button -->
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="history.back()"
+        >
+
+            <span>←</span>
+
+            Back
+
+        </button>
+
+
+
+        <div class="form-heading">
+
+            <h1>📨 Send SMS</h1>
+
+
+            <p>
+                Send notifications to selected
+                area members
+            </p>
+
+        </div>
+
+
+
+        <!-- Select Area -->
+
+        <div class="form-group">
+
+            <label for="smsArea">
+                Select Area
+            </label>
+
+
+            <select id="smsArea">
+
+                <option value="">
+                    Select Area
+                </option>
+
+
+                <option value="Killinjikuppam">
+                    Killinjikuppam
+                </option>
+
+
+                <option value="Killinjikuppam PT">
+                    Killinjikuppam PT
+                </option>
+
+
+                <option value="Puthu Poonjolaikuppam">
+                    Puthu Poonjolaikuppam
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- Members -->
+
+        <div class="sms-members-section">
+
+
+            <div class="sms-members-header">
+
+                <h2>
+                    Area Members
+                </h2>
+
+
+                <button
+                    type="button"
+                    id="selectAllBtn"
+                >
+
+                    ☑ Select All
+
+                </button>
+
+            </div>
+
+
+
+            <div id="smsMembers">
+
+                <p>
+                    Select an area to view members.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Message -->
+
+        <div class="form-group">
+
+            <label for="smsMessage">
+                Message
+            </label>
+
+
+            <textarea
+                id="smsMessage"
+                rows="6"
+                maxlength="500"
+                placeholder="Type your message here..."
+            ></textarea>
+
+
+            <p id="characterCount">
+                0 / 500
+            </p>
+
+        </div>
+
+
+
+        <!-- Send -->
+
+        <button
+            type="button"
+            id="sendSmsBtn"
+            class="save-button"
+        >
+
+            📩 Send SMS
+
+        </button>
+
+
+        <p id="smsStatus"></p>
+
+
+    </section>
+
+
+
+    <script src="js/send-sms.js"></script>
+
+
+</body>
+
+</html>

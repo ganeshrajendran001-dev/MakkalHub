@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Items & Prices - MakkalHub Admin</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            🌐 MakkalHub
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                View Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Main Container -->
+
+    <section class="admin-form-container">
+
+
+        <!-- Back Button -->
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="history.back()"
+        >
+
+            <span>←</span>
+
+            Back
+
+        </button>
+
+
+
+        <div class="form-heading">
+
+            <h1>
+                Today's Items
+            </h1>
+
+            <p>
+                Add or update today's items,
+                prices and availability
+            </p>
+
+        </div>
+
+
+
+        <!-- Item Form -->
+
+        <form id="itemForm">
+
+
+            <!-- Date -->
+
+            <!-- Today's Date -->
+<div class="form-group">
+
+    <label for="itemDate">
+        Date
+    </label>
+
+    <input
+        type="date"
+        id="itemDate"
+        required
+        readonly
+    >
+
+</div>
+
+            <!-- Item Name -->
+
+            <div class="form-group">
+
+                <label for="itemName">
+                    Item Name
+                </label>
+
+
+                <select
+                    id="itemName"
+                    required
+                >
+
+                    <option value="">
+                        Select Item
+                    </option>
+
+                    <option value="Rice">
+                        Rice
+                    </option>
+
+                    <option value="Sugar">
+                        Sugar
+                    </option>
+
+                    <option value="Wheat">
+                        Wheat
+                    </option>
+
+                    <option value="Oil">
+                        Oil
+                    </option>
+
+                    <option value="Dal">
+                        Dal
+                    </option>
+
+                    <!-- New Item -->
+
+                    <option value="Kerosene">
+                        Kerosene
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Price -->
+
+            <div class="form-group">
+
+                <label for="itemPrice">
+                    Price
+                </label>
+
+
+                <input
+                    type="number"
+                    id="itemPrice"
+                    placeholder="Enter price"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Unit -->
+
+            <div class="form-group">
+
+                <label for="itemUnit">
+                    Unit
+                </label>
+
+
+                <select
+                    id="itemUnit"
+                    required
+                >
+
+                    <option value="Kg">
+                        Kg
+                    </option>
+
+                    <option value="Packet">
+                        Packet
+                    </option>
+
+                    <option value="Litre">
+                        Litre
+                    </option>
+
+                    <option value="Piece">
+                        Piece
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Quantity -->
+
+            <div class="form-group">
+
+                <label for="itemQuantity">
+                    Available Quantity
+                </label>
+
+
+                <input
+                    type="number"
+                    id="itemQuantity"
+                    placeholder="Enter quantity"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Availability -->
+
+            <div class="form-group">
+
+                <label for="availability">
+                    Availability
+                </label>
+
+
+                <select id="availability">
+
+                    <option value="Available">
+                        Available
+                    </option>
+
+                    <option value="Not Available">
+                        Not Available
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Description -->
+
+            <div class="form-group">
+
+                <label for="itemDescription">
+                    Additional Information
+                </label>
+
+
+                <textarea
+                    id="itemDescription"
+                    rows="3"
+                    placeholder="Enter additional information"
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- Save -->
+
+            <button
+                type="submit"
+                class="save-button"
+            >
+
+                💾 Save Item
+
+            </button>
+
+
+            <p id="itemMessage"></p>
+
+
+        </form>
+
+
+    </section>
+
+
+
+    <script src="js/items.js"></script>
+
+
+</body>
+
+</html>

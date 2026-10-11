@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Status - MakkalHub Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .history-container {
+            width: min(1000px, 94%);
+            margin: 30px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,.08);
+        }
+
+        .history-heading { text-align: center; margin-bottom: 28px; }
+        .history-heading h2 { margin-bottom: 8px; }
+        .history-heading p { color: #64748b; }
+
+        .status-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            margin: 16px 0;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #c9a227;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,.07);
+            background: white;
+        }
+
+        .status-details { min-width: 0; }
+        .status-details h3 { margin: 0 0 10px; color: #111827; }
+        .status-details p { margin: 7px 0; color: #64748b; overflow-wrap: anywhere; }
+        .status-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+        .action-button {
+            padding: 9px 15px;
+            border: 1px solid;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            background: white;
+        }
+
+        .edit-button { border-color: #172554; color: #172554; }
+        .delete-button { border-color: #dc6262; color: #b91c1c; }
+        .edit-button:hover { background: #eff6ff; }
+        .delete-button:hover { background: #fef2f2; }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 9px;
+            border-radius: 20px;
+            background: #ecfdf5;
+            color: #047857;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .status-badge.archived { background: #f3f4f6; color: #6b7280; }
+        #historyMessage, #statusMessage { margin-top: 12px; }
+        .empty-message { padding: 25px; text-align: center; color: #64748b; }
+
+        @media (max-width: 650px) {
+            .status-card { align-items: flex-start; flex-direction: column; }
+            .status-actions { width: 100%; }
+            .action-button { flex: 1; }
+            .history-container { padding: 16px; }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <div class="logo">🌐 MakkalHub</div>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="index.html">View Website</a>
+    </nav>
+</header>
+
+<section class="admin-form-container">
+    <button type="button" class="back-button" onclick="history.back()">← Back</button>
+
+    <div class="form-heading">
+        <h1>Shop Status Management</h1>
+        <p>Update shop information, timings and availability</p>
+    </div>
+
+    <form id="shopStatusForm">
+        <input type="hidden" id="recordId">
+
+        <div class="form-group">
+            <label for="scheduleDate">Date</label>
+            <input type="date" id="scheduleDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="shopStatus">Shop Status</label>
+            <select id="shopStatus" required>
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+                <option value="Holiday">Holiday</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>In Time</label>
+            <div style="display:flex;gap:10px">
+                <select id="inHour" required>
+                    <option>01</option><option>02</option><option>03</option>
+                    <option>04</option><option>05</option><option>06</option>
+                    <option>07</option><option value="08" selected>08</option>
+                    <option>09</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                <select id="inMinute" required>
+                    <option value="00">00</option><option value="15">15</option>
+                    <option value="30">30</option><option value="45">45</option>
+                </select>
+                <select id="inPeriod" required>
+                    <option value="AM" selected>AM</option><option value="PM">PM</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Out Time</label>
+            <div style="display:flex;gap:10px">
+                <select id="outHour" required>
+                    <option>01</option><option>02</option><option>03</option>
+                    <option>04</option><option value="05" selected>05</option>
+                    <option>06</option><option>07</option><option>08</option>
+                    <option>09</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                <select id="outMinute" required>
+                    <option value="00">00</option><option value="15">15</option>
+                    <option value="30">30</option><option value="45">45</option>
+                </select>
+                <select id="outPeriod" required>
+                    <option value="AM">AM</option><option value="PM" selected>PM</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="adminStatus">Admin Status</label>
+            <select id="adminStatus">
+                <option value="Available">Available</option>
+                <option value="Leave">Leave</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="leaveDate">Leave Date</label>
+            <input type="date" id="leaveDate">
+        </div>
+
+        <div class="form-group">
+            <label for="leaveReason">Leave Reason</label>
+            <textarea id="leaveReason" placeholder="Enter leave reason" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="nextAvailableDate">Next Available Date</label>
+            <input type="date" id="nextAvailableDate">
+        </div>
+
+        <button type="submit" class="save-button" id="saveButton">💾 Save Shop Information</button>
+        <button type="button" id="cancelEditButton" class="back-button" hidden>Cancel Edit</button>
+        <p id="statusMessage" role="status"></p>
+    </form>
+</section>
+
+<section class="history-container">
+    <div class="history-heading">
+        <h2>📋 Saved Shop Status</h2>
+        <p>Edit or archive existing shop status records</p>
+    </div>
+
+    <div id="historyCards">
+        <p class="empty-message">Loading shop status...</p>
+    </div>
+
+   
+
+    <p id="historyMessage" role="status"></p>
+</section>
+
+<script src="js/shop-status.js"></script>
+</body>
+</html>

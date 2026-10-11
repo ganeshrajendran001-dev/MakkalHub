@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Area Distribution Schedule - MakkalHub Admin</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            🌐 MakkalHub
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                View Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Schedule Form -->
+
+    <section class="admin-form-container">
+
+
+        <!-- Back Button -->
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="history.back()"
+        >
+
+            <span>←</span>
+
+            Back
+
+        </button>
+
+
+
+        <div class="form-heading">
+
+            <h1>
+                Area Distribution Schedule
+            </h1>
+
+
+            <p>
+                Manage distribution schedules for
+                Killinjikuppam, Killinjikuppam PT
+                and Puthu Poonjolaikuppam
+            </p>
+
+        </div>
+
+
+
+        <form id="scheduleForm">
+
+
+            <!-- Date -->
+
+            <div class="form-group">
+
+                <label>
+                    Date
+                </label>
+
+
+                <input
+                    type="date"
+                    id="scheduleDate"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Area -->
+
+            <div class="form-group">
+
+                <label>
+                    Select Area
+                </label>
+
+
+                <select
+                    id="area"
+                    required
+                >
+
+                    <option value="">
+                        Select Area
+                    </option>
+
+
+                    <option value="Killinjikuppam">
+                        Killinjikuppam
+                    </option>
+
+
+                    <option value="Killinjikuppam PT">
+                        Killinjikuppam PT
+                    </option>
+
+
+                    <option value="Puthu Poonjolaikuppam">
+                        Puthu Poonjolaikuppam
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Start Time -->
+
+            <div class="form-group">
+
+                <label>
+                    Distribution Start Time
+                </label>
+
+
+                <select
+                    id="startTime"
+                    required
+                >
+
+                    <option value="">
+                        Select Start Time
+                    </option>
+
+
+                    <option value="08:00">
+                        08:00 AM
+                    </option>
+
+                    <option value="09:00">
+                        09:00 AM
+                    </option>
+
+                    <option value="10:00">
+                        10:00 AM
+                    </option>
+
+                    <option value="11:00">
+                        11:00 AM
+                    </option>
+
+                    <option value="12:00">
+                        12:00 PM
+                    </option>
+
+                    <option value="13:00">
+                        01:00 PM
+                    </option>
+
+                    <option value="14:00">
+                        02:00 PM
+                    </option>
+
+                    <option value="15:00">
+                        03:00 PM
+                    </option>
+
+                    <option value="16:00">
+                        04:00 PM
+                    </option>
+
+                    <option value="17:00">
+                        05:00 PM
+                    </option>
+
+                    <option value="18:00">
+                        06:00 PM
+                    </option>
+
+                    <option value="19:00">
+                        07:00 PM
+                    </option>
+
+                    <option value="20:00">
+                        08:00 PM
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- End Time -->
+
+            <div class="form-group">
+
+                <label>
+                    Distribution End Time
+                </label>
+
+
+                <select
+                    id="endTime"
+                    required
+                >
+
+                    <option value="">
+                        Select End Time
+                    </option>
+
+
+                    <option value="08:00">
+                        08:00 AM
+                    </option>
+
+                    <option value="09:00">
+                        09:00 AM
+                    </option>
+
+                    <option value="10:00">
+                        10:00 AM
+                    </option>
+
+                    <option value="11:00">
+                        11:00 AM
+                    </option>
+
+                    <option value="12:00">
+                        12:00 PM
+                    </option>
+
+                    <option value="13:00">
+                        01:00 PM
+                    </option>
+
+                    <option value="14:00">
+                        02:00 PM
+                    </option>
+
+                    <option value="15:00">
+                        03:00 PM
+                    </option>
+
+                    <option value="16:00">
+                        04:00 PM
+                    </option>
+
+                    <option value="17:00">
+                        05:00 PM
+                    </option>
+
+                    <option value="18:00">
+                        06:00 PM
+                    </option>
+
+                    <option value="19:00">
+                        07:00 PM
+                    </option>
+
+                    <option value="20:00">
+                        08:00 PM
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Items -->
+
+            <div class="form-group">
+
+                <label>
+                    Available Items
+                </label>
+
+
+                <div class="checkbox-group">
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Rice"
+                            class="itemCheck"
+                        >
+
+                        Rice
+
+                    </label>
+
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Sugar"
+                            class="itemCheck"
+                        >
+
+                        Sugar
+
+                    </label>
+
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Wheat"
+                            class="itemCheck"
+                        >
+
+                        Wheat
+
+                    </label>
+
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Oil"
+                            class="itemCheck"
+                        >
+
+                        Oil
+
+                    </label>
+
+                    <label>
+
+    <input
+        type="checkbox"
+        value="Dal"
+        class="itemCheck"
+    >
+
+    Dal
+
+</label>
+
+
+
+<label>
+
+    <input
+        type="checkbox"
+        value="Kerosene"
+        class="itemCheck"
+    >
+
+    Kerosene
+
+</label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Status -->
+
+            <div class="form-group">
+
+                <label>
+                    Status
+                </label>
+
+
+                <select id="scheduleStatus">
+
+                    <option value="Available">
+                        Available
+                    </option>
+
+                    <option value="Upcoming">
+                        Upcoming
+                    </option>
+
+                    <option value="Not Available">
+                        Not Available
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Notes -->
+
+            <div class="form-group">
+
+                <label>
+                    Additional Notes
+                </label>
+
+
+                <textarea
+                    id="notes"
+                    rows="4"
+                    placeholder="Enter any additional information..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- Save -->
+
+            <button
+                type="submit"
+                class="save-button"
+            >
+
+                💾 Save Schedule
+
+            </button>
+
+
+            <p id="scheduleMessage"></p>
+
+
+        </form>
+
+
+
+        <hr>
+
+
+
+        <!-- Saved Schedules -->
+
+        <div class="form-heading">
+
+            <h2>
+                Saved Distribution Schedules
+            </h2>
+
+
+            <p>
+                View, edit or delete existing schedules
+            </p>
+
+        </div>
+
+
+
+        <div id="scheduleList">
+
+            <p>
+                Loading schedules...
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <script src="js/schedule.js"></script>
+
+
+</body>
+
+</html>

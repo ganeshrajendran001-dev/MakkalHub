@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SMS History - MakkalHub Admin</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Admin Header -->
+
+    <header>
+
+        <div class="logo">
+            🌐 MakkalHub
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                View Website
+            </a>
+
+            <a
+                href="#"
+                class="admin-btn"
+                id="logoutBtn"
+            >
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- SMS History -->
+
+    <section class="form-section">
+
+
+        <!-- Back Button -->
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="history.back()"
+        >
+
+            <span>←</span>
+
+            Back
+
+        </button>
+
+
+
+        <div class="form-container">
+
+
+            <!-- Heading -->
+
+            <h1>
+                📜 SMS History
+            </h1>
+
+
+            <p>
+                View and manage previously sent SMS notifications.
+            </p>
+
+
+
+            <!-- History Actions -->
+
+            <div class="sms-history-toolbar">
+
+                <div class="sms-history-select">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="selectAllHistory"
+                        >
+
+                        <span>Select All</span>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="deleteSelectedBtn"
+                    class="delete-button"
+                    disabled
+                >
+
+                    🗑️ Delete Selected
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Selected Count -->
+
+            <p
+                id="selectedCount"
+                class="selected-count"
+            >
+                0 selected
+            </p>
+
+
+
+            <!-- SMS History Table -->
+
+            <div class="table-container sms-history-table-container">
+
+                <table class="sms-history-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Select
+                            </th>
+
+                            <th>
+                                S.No
+                            </th>
+
+                            <th>
+                                Mobile Number
+                            </th>
+
+                            <th>
+                                Message
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Time
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tbody id="smsHistoryTable">
+
+                        <tr>
+
+                            <td colspan="8">
+
+                                Loading SMS history...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- Message -->
+
+            <p id="historyMessage"></p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            MakkalHub - Admin Panel
+        </h3>
+
+
+        <p>
+            SMS notification history
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/sms-history.js"></script>
+
+    <script src="js/logout.js"></script>
+
+
+</body>
+
+</html>

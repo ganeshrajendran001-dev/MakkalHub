@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <script>
+        const adminSession =
+            sessionStorage.getItem("admin");
+
+        if (!adminSession) {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <title>Admin Dashboard - MakkalHub</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ADMIN HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            🌐 MakkalHub
+        </div>
+
+        <nav>
+
+            <a href="admin-profile.html">
+                Admin Profile
+            </a>
+
+            <a href="index.html">
+                View Website
+            </a>
+
+            <a
+                href="#"
+                class="admin-btn"
+                id="logoutBtn"
+            >
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <section class="dashboard">
+
+
+        <!-- Back Button -->
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="history.back()"
+        >
+
+            <span>←</span>
+
+            Back
+
+        </button>
+
+
+
+        <!-- Heading -->
+
+        <div class="dashboard-heading">
+
+            <h1>
+                MakkalHub Admin Dashboard
+            </h1>
+
+            <p>
+                Manage public information, distribution schedules
+                and notifications
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             DASHBOARD CARDS
+        ========================== -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- =========================
+                 1. SHOP STATUS
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/shop-status.png"
+                        alt="Shop Status"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        Shop Status
+                    </h2>
+
+                    <p>
+                        Manage opening time, closing time
+                        and leave details.
+                    </p>
+
+                    <a
+                        href="shop-status.html"
+                        class="manage-link"
+                    >
+                        ⚙️ Manage
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 2. ITEMS & PRICES
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/items-prices.png"
+                        alt="Items and Prices"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        Items & Prices
+                    </h2>
+
+                    <p>
+                        Add daily items, available quantity
+                        and prices.
+                    </p>
+
+                    <a
+                        href="items.html"
+                        class="manage-link"
+                    >
+                        📦 Manage
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 3. AREA SCHEDULE
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/area schedule.png"
+                        alt="Area Schedule"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        Area Schedule
+                    </h2>
+
+                    <p>
+                        Manage distribution schedules
+                        for all three areas.
+                    </p>
+
+                    <a
+                        href="schedule.html"
+                        class="manage-link"
+                    >
+                        📅 Manage
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 4. SPECIAL GOVERNMENT ISSUE
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/special-government-issue.png"
+                        alt="Special Government Issue"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        Special Government Issue
+                    </h2>
+
+                    <p>
+                        Add next month's special
+                        government issue details.
+                    </p>
+
+                    <a
+                        href="special-issue.html"
+                        class="manage-link"
+                    >
+                        🎁 Manage
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 5. PUBLIC NUMBERS
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/public numbers.jpeg"
+                        alt="Public Numbers"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        Public Numbers
+                    </h2>
+
+                    <p>
+                        Manage public mobile numbers
+                        and area details.
+                    </p>
+
+                    <a
+                        href="public-numbers.html"
+                        class="manage-link"
+                    >
+                        📱 Manage
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 6. SEND SMS
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/send-sms.jpeg"
+                        alt="Send SMS"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        Send SMS
+                    </h2>
+
+                    <p>
+                        Send public notifications
+                        to selected people.
+                    </p>
+
+                    <a
+                        href="send-sms.html"
+                        class="manage-link"
+                    >
+                        📨 Send SMS
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 7. SMS HISTORY
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/sms-history.jpeg"
+                        alt="SMS History"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        SMS History
+                    </h2>
+
+                    <p>
+                        View previously prepared SMS
+                        messages and sending history.
+                    </p>
+
+                    <a
+                        href="sms-history.html"
+                        class="manage-link"
+                    >
+                        📜 View History
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 8. CLEAR TODAY
+            ========================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-image">
+
+                    <img
+                        src="../images/dashboard/clear today-information.jpeg"
+                        alt="Clear Today's Information"
+                    >
+
+                </div>
+
+                <div class="dashboard-card-content">
+
+                    <h2>
+                        Clear Today's Information
+                    </h2>
+
+                    <p>
+                        Clear today's shop information
+                        from the public website after the
+                        shop is closed.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="manage-link"
+                        id="clearTodayBtn"
+                    >
+                        🧹 Clear Today
+                        <span>→</span>
+                    </button>
+
+                    <p
+                        id="clearTodayMessage"
+                        class="clear-today-message"
+                    ></p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            MakkalHub - Admin Panel
+        </h3>
+
+        <p>
+            Digital Public Information & Notification Portal
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/logout.js"></script>
+
+    <script src="js/clear-today.js"></script>
+
+
+</body>
+
+</html>
